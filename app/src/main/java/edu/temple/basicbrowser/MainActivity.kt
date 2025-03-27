@@ -28,5 +28,10 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        goButton.setOnClickListener {
+            var url: String = urlEditText.text.toString().replace("http", "https")
+            webView.loadUrl(url)
+        }
+
     }
 }
